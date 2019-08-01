@@ -6,6 +6,8 @@ class StudentsController < ApplicationController
   end
 
   def show
+    @students = Student.find(params[:id])
+    @students.active = true
   end
 
   private
